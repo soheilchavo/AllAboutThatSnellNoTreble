@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkqka1hx8of0f"]
+
+[ext_resource type="Script" uid="uid://cf7v2dmvoe6mw" path="res://scripts/gliding_platform.gd" id="1_6p3rm"]
+[ext_resource type="Texture2D" uid="uid://7ep6i32i28j6" path="res://sprites/Wall.png" id="2_lkqk4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4xot0"]
+size = Vector2(64, 23)
+
+[node name="GlidingPlatform" type="Node2D" groups=["object", "wall"]]
+script = ExtResource("1_6p3rm")
+SPEED = 1.0
+AMPLITUDE = 1.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["wall"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("2_lkqk4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_4xot0")

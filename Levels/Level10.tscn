@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cvj2tyhitevbk"]
+[gd_scene load_steps=13 format=3 uid="uid://cvj2tyhitevbk"]
 
 [ext_resource type="Texture2D" uid="uid://3efhem05d81h" path="res://sprites/Background.png" id="1_av53g"]
 [ext_resource type="PackedScene" uid="uid://cws2rop55m7jy" path="res://camera_obj.tscn" id="1_g6ghg"]
@@ -7,21 +7,13 @@
 [ext_resource type="PackedScene" uid="uid://u0ihkwmrusrc" path="res://scenes/Reciever.tscn" id="4_357ht"]
 [ext_resource type="PackedScene" uid="uid://dvgoxc6ndoe8f" path="res://scenes/PlayButton.tscn" id="5_2ua1f"]
 [ext_resource type="PackedScene" uid="uid://djfgdbscfpnh" path="res://scenes/RetryButton.tscn" id="6_45mx6"]
-[ext_resource type="PackedScene" uid="uid://chatxggrkoh6i" path="res://scenes/Capacitor.tscn" id="7_nfa0x"]
 [ext_resource type="PackedScene" uid="uid://dy0aeftm0y5ag" path="res://scenes/SuperReflector.tscn" id="8_h5yle"]
-[ext_resource type="PackedScene" uid="uid://ds5n3imwmtj36" path="res://scenes/Reflector.tscn" id="9_xx8dr"]
 [ext_resource type="Script" uid="uid://hf74oircm13n" path="res://scripts/game_manager.gd" id="10_41o7t"]
 [ext_resource type="PackedScene" uid="uid://m8n1vflytfpr" path="res://scenes/NextLevelButton.tscn" id="11_qbgrt"]
 [ext_resource type="PackedScene" uid="uid://jhemnpd2mqdf" path="res://scenes/RotatingPlatform2.tscn" id="12_nnl7c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2puwf"]
 size = Vector2(680, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_by1fu"]
-size = Vector2(19, 63)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dvuif"]
-size = Vector2(266, 20)
 
 [node name="BaseScene" type="Node2D"]
 
@@ -503,22 +495,6 @@ texture = ExtResource("2_g6ghg")
 position = Vector2(-215, 310)
 texture = ExtResource("2_g6ghg")
 
-[node name="Wall63" type="Sprite2D" parent="Walls"]
-position = Vector2(107, -158)
-texture = ExtResource("2_g6ghg")
-
-[node name="Wall64" type="Sprite2D" parent="Walls"]
-position = Vector2(171, -158)
-texture = ExtResource("2_g6ghg")
-
-[node name="Wall65" type="Sprite2D" parent="Walls"]
-position = Vector2(235, -158)
-texture = ExtResource("2_g6ghg")
-
-[node name="Wall66" type="Sprite2D" parent="Walls"]
-position = Vector2(299, -158)
-texture = ExtResource("2_g6ghg")
-
 [node name="Wall3" type="Sprite2D" parent="Walls"]
 position = Vector2(-151, 310)
 texture = ExtResource("2_g6ghg")
@@ -594,12 +570,6 @@ flip_v = true
 
 [node name="Wall27" type="Sprite2D" parent="Walls"]
 position = Vector2(-325, 56)
-rotation = 1.5707964
-texture = ExtResource("2_g6ghg")
-flip_v = true
-
-[node name="Wall62" type="Sprite2D" parent="Walls"]
-position = Vector2(-27, 58)
 rotation = 1.5707964
 texture = ExtResource("2_g6ghg")
 flip_v = true
@@ -736,7 +706,7 @@ texture = ExtResource("2_g6ghg")
 flip_v = true
 
 [node name="Wall18" type="Sprite2D" parent="Walls"]
-position = Vector2(169, -346)
+position = Vector2(169, -345)
 texture = ExtResource("2_g6ghg")
 flip_v = true
 
@@ -756,14 +726,6 @@ flip_v = true
 position = Vector2(9, 313)
 shape = SubResource("RectangleShape2D_2puwf")
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="Walls/Wallbody2"]
-position = Vector2(-24, 58)
-shape = SubResource("RectangleShape2D_by1fu")
-
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="Walls/Wallbody2"]
-position = Vector2(211, -156)
-shape = SubResource("RectangleShape2D_dvuif")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wallbody2"]
 position = Vector2(0, -349)
 shape = SubResource("RectangleShape2D_2puwf")
@@ -779,12 +741,11 @@ rotation = 1.5707964
 shape = SubResource("RectangleShape2D_2puwf")
 
 [node name="Source" parent="." instance=ExtResource("3_8nqai")]
-position = Vector2(298, 241)
-rotation = -1.5707964
-direction = Vector2(-1, 0)
+position = Vector2(-78, 271)
+direction = Vector2(0, -1)
 
 [node name="Reciever" parent="." instance=ExtResource("4_357ht")]
-position = Vector2(267, -305)
+position = Vector2(171, -307)
 rotation = 3.1415927
 
 [node name="PlayButton" parent="." instance=ExtResource("5_2ua1f")]
@@ -811,32 +772,14 @@ text = "Click and drag with mouse to move resources
 
 Press R to rotate a resource while dragging it"
 
-[node name="Capacitor" parent="Resources" instance=ExtResource("7_nfa0x")]
-position = Vector2(407, -304)
-
-[node name="Capacitor2" parent="Resources" instance=ExtResource("7_nfa0x")]
-position = Vector2(480, -306)
-
 [node name="SuperReflector2" parent="Resources" instance=ExtResource("8_h5yle")]
-position = Vector2(546, -302)
+position = Vector2(405, -229)
 
 [node name="SuperReflector3" parent="Resources" instance=ExtResource("8_h5yle")]
-position = Vector2(609, -304)
+position = Vector2(406, -297)
 
 [node name="SuperReflector5" parent="Resources" instance=ExtResource("8_h5yle")]
-position = Vector2(545, -240)
-
-[node name="Reflector" parent="Resources" instance=ExtResource("9_xx8dr")]
-position = Vector2(409, -170)
-
-[node name="Reflector2" parent="Resources" instance=ExtResource("9_xx8dr")]
-position = Vector2(478, -240)
-
-[node name="Reflector4" parent="Resources" instance=ExtResource("9_xx8dr")]
-position = Vector2(405, -240)
-
-[node name="Reflector3" parent="Resources" instance=ExtResource("9_xx8dr")]
-position = Vector2(477, -171)
+position = Vector2(407, -155)
 
 [node name="GameManager" type="Node2D" parent="."]
 script = ExtResource("10_41o7t")
@@ -854,5 +797,13 @@ offset_bottom = -470.0
 text = "Level 10"
 
 [node name="RotatingPlatform" parent="." instance=ExtResource("12_nnl7c")]
-position = Vector2(-25, -80)
+position = Vector2(178, -32)
 SPEED = 20.0
+
+[node name="RotatingPlatform2" parent="." instance=ExtResource("12_nnl7c")]
+position = Vector2(-127, 132)
+SPEED = 25.0
+
+[node name="RotatingPlatform3" parent="." instance=ExtResource("12_nnl7c")]
+position = Vector2(-52, -179)
+SPEED = 15.0
