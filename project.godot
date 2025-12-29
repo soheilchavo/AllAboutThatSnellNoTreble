@@ -23,6 +23,8 @@ Global="*res://scripts/global.gd"
 
 window/size/viewport_width=800
 window/size/viewport_height=800
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [input]
 
