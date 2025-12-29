@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://xfuitpcv6fa4"]
+[gd_scene load_steps=14 format=3 uid="uid://xfuitpcv6fa4"]
 
 [ext_resource type="PackedScene" uid="uid://cws2rop55m7jy" path="res://camera_obj.tscn" id="1_vt3f8"]
 [ext_resource type="Texture2D" uid="uid://3efhem05d81h" path="res://sprites/Background.png" id="2_7hgg3"]
@@ -7,10 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://u0ihkwmrusrc" path="res://scenes/Reciever.tscn" id="5_ekdwr"]
 [ext_resource type="PackedScene" uid="uid://dvgoxc6ndoe8f" path="res://scenes/PlayButton.tscn" id="6_dptec"]
 [ext_resource type="PackedScene" uid="uid://djfgdbscfpnh" path="res://scenes/RetryButton.tscn" id="7_2462e"]
-[ext_resource type="PackedScene" uid="uid://dy0aeftm0y5ag" path="res://scenes/SuperReflector.tscn" id="8_ffoej"]
 [ext_resource type="Script" uid="uid://hf74oircm13n" path="res://scripts/game_manager.gd" id="9_3bgpl"]
+[ext_resource type="PackedScene" uid="uid://ds5n3imwmtj36" path="res://scenes/Reflector.tscn" id="9_7hgg3"]
 [ext_resource type="PackedScene" uid="uid://m8n1vflytfpr" path="res://scenes/NextLevelButton.tscn" id="10_rd6h6"]
 [ext_resource type="PackedScene" path="res://scenes/GlidingPlatform.tscn" id="11_vt3f8"]
+[ext_resource type="PackedScene" uid="uid://chatxggrkoh6i" path="res://scenes/Capacitor.tscn" id="12_7hgg3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2puwf"]
 size = Vector2(680, 20)
@@ -756,6 +757,12 @@ position = Vector2(-222, -406)
 
 [node name="Resources" type="Node2D" parent="."]
 
+[node name="Capacitor" parent="Resources" instance=ExtResource("12_7hgg3")]
+position = Vector2(476, -304)
+
+[node name="Capacitor2" parent="Resources" instance=ExtResource("12_7hgg3")]
+position = Vector2(544, -304)
+
 [node name="Text" type="RichTextLabel" parent="Resources"]
 offset_left = 376.0
 offset_top = -361.0
@@ -772,11 +779,14 @@ text = "Click and drag with mouse to move resources
 
 Press R to rotate a resource while dragging it"
 
-[node name="SuperReflector2" parent="Resources" instance=ExtResource("8_ffoej")]
-position = Vector2(405, -229)
+[node name="Reflector" parent="Resources" instance=ExtResource("9_7hgg3")]
+position = Vector2(403, -303)
 
-[node name="SuperReflector3" parent="Resources" instance=ExtResource("8_ffoej")]
-position = Vector2(407, -303)
+[node name="Reflector2" parent="Resources" instance=ExtResource("9_7hgg3")]
+position = Vector2(404, -237)
+
+[node name="Reflector3" parent="Resources" instance=ExtResource("9_7hgg3")]
+position = Vector2(476, -236)
 
 [node name="GameManager" type="Node2D" parent="."]
 script = ExtResource("9_3bgpl")
@@ -793,7 +803,48 @@ offset_right = -204.0
 offset_bottom = -470.0
 text = "Level 10"
 
-[node name="GlidingPlatform" parent="." instance=ExtResource("11_vt3f8")]
+[node name="Platforms" type="Node2D" parent="."]
+
+[node name="GlidingPlatform10" parent="Platforms" instance=ExtResource("11_vt3f8")]
+position = Vector2(116, -160)
+rotation = 4.712389
+
+[node name="GlidingPlatform11" parent="Platforms" instance=ExtResource("11_vt3f8")]
+position = Vector2(224, -160)
+rotation = 4.712389
+
+[node name="GlidingPlatform" parent="Platforms" instance=ExtResource("11_vt3f8")]
+position = Vector2(-268, -115)
+AMPLITUDE = 0.37
+
+[node name="GlidingPlatform2" parent="Platforms" instance=ExtResource("11_vt3f8")]
+position = Vector2(-201, -115)
+AMPLITUDE = 0.37
+
+[node name="GlidingPlatform3" parent="Platforms" instance=ExtResource("11_vt3f8")]
+position = Vector2(-134, -115)
+AMPLITUDE = 0.37
+
+[node name="GlidingPlatform4" parent="Platforms" instance=ExtResource("11_vt3f8")]
+position = Vector2(-68, -115)
+AMPLITUDE = 0.37
+
+[node name="GlidingPlatform5" parent="Platforms" instance=ExtResource("11_vt3f8")]
 position = Vector2(-1, -115)
-SPEED = 0.2
-AMPLITUDE = 8.0
+AMPLITUDE = 0.37
+
+[node name="GlidingPlatform6" parent="Platforms" instance=ExtResource("11_vt3f8")]
+position = Vector2(66, -115)
+AMPLITUDE = 0.37
+
+[node name="GlidingPlatform7" parent="Platforms" instance=ExtResource("11_vt3f8")]
+position = Vector2(132, -115)
+AMPLITUDE = 0.37
+
+[node name="GlidingPlatform8" parent="Platforms" instance=ExtResource("11_vt3f8")]
+position = Vector2(199, -115)
+AMPLITUDE = 0.37
+
+[node name="GlidingPlatform9" parent="Platforms" instance=ExtResource("11_vt3f8")]
+position = Vector2(266, -115)
+AMPLITUDE = 0.37
