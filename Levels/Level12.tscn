@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
 [gd_scene load_steps=14 format=3 uid="uid://xfuitpcv6fa4"]
-=======
-[gd_scene load_steps=13 format=3 uid="uid://dyixkv63l7052"]
->>>>>>> Stashed changes
 
 [ext_resource type="PackedScene" uid="uid://cws2rop55m7jy" path="res://camera_obj.tscn" id="1_vt3f8"]
 [ext_resource type="Texture2D" uid="uid://3efhem05d81h" path="res://sprites/Background.png" id="2_7hgg3"]
@@ -14,12 +10,8 @@
 [ext_resource type="Script" uid="uid://hf74oircm13n" path="res://scripts/game_manager.gd" id="9_3bgpl"]
 [ext_resource type="PackedScene" uid="uid://ds5n3imwmtj36" path="res://scenes/Reflector.tscn" id="9_7hgg3"]
 [ext_resource type="PackedScene" uid="uid://m8n1vflytfpr" path="res://scenes/NextLevelButton.tscn" id="10_rd6h6"]
-<<<<<<< Updated upstream
 [ext_resource type="PackedScene" path="res://scenes/GlidingPlatform.tscn" id="11_vt3f8"]
 [ext_resource type="PackedScene" uid="uid://chatxggrkoh6i" path="res://scenes/Capacitor.tscn" id="12_7hgg3"]
-=======
-[ext_resource type="PackedScene" uid="uid://dkqka1hx8of0f" path="res://scenes/GlidingPlatform.tscn" id="11_vt3f8"]
->>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2puwf"]
 size = Vector2(680, 20)
@@ -798,7 +790,7 @@ position = Vector2(476, -236)
 
 [node name="GameManager" type="Node2D" parent="."]
 script = ExtResource("9_3bgpl")
-current_level = 12
+current_level = 10
 
 [node name="NextLevel" parent="." instance=ExtResource("10_rd6h6")]
 visible = false
@@ -809,8 +801,7 @@ offset_left = -325.0
 offset_top = -495.0
 offset_right = -204.0
 offset_bottom = -470.0
-text = "Level 12
-"
+text = "Level 10"
 
 [node name="Platforms" type="Node2D" parent="."]
 
