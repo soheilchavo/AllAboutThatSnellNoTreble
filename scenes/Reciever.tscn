@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://u0ihkwmrusrc"]
+
+[ext_resource type="Script" uid="uid://va5r6qlgpcun" path="res://scripts/reciever.gd" id="1_t1d8j"]
+[ext_resource type="Texture2D" uid="uid://c38rhv4n8vjlr" path="res://sprites/Reciever.png" id="2_5d5i1"]
+[ext_resource type="Texture2D" uid="uid://bun2diagnyovn" path="res://sprites/Checkmark.png" id="3_t1d8j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_emgp5"]
+size = Vector2(52, 37)
+
+[node name="Reciever" type="Area2D" groups=["Reciever"]]
+script = ExtResource("1_t1d8j")
+metadata/completed = false
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_5d5i1")
+
+[node name="Checkmark" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(29, -1.0000019)
+scale = Vector2(0.34375, 0.34375)
+texture = ExtResource("3_t1d8j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 13.5)
+shape = SubResource("RectangleShape2D_emgp5")

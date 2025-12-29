@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://djfgdbscfpnh"]
+
+[ext_resource type="Script" uid="uid://0n4psxol3n85" path="res://scripts/retry_button.gd" id="1_4erok"]
+[ext_resource type="Texture2D" uid="uid://dl8n5rcapt456" path="res://sprites/RetryButton.png" id="2_ykxcy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e8n10"]
+radius = 33.0
+
+[node name="RetryButton" type="Area2D"]
+script = ExtResource("1_4erok")
+
+[node name="RetryButton" type="Sprite2D" parent="."]
+texture = ExtResource("2_ykxcy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_e8n10")

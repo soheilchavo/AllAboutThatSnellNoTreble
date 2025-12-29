@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cl2jadwc7hird"]
+
+[ext_resource type="Script" uid="uid://b30pmk72sfv0l" path="res://scripts/source.gd" id="1_1dufd"]
+[ext_resource type="Texture2D" uid="uid://cqa48aynmbro0" path="res://sprites/Source.png" id="1_emgp5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_emgp5"]
+size = Vector2(52, 13)
+
+[node name="Source" type="StaticBody2D" groups=["source"]]
+script = ExtResource("1_1dufd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_emgp5")
+
+[node name="Mussel" type="Node2D" parent="."]
+position = Vector2(0, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 25.5)
+shape = SubResource("RectangleShape2D_emgp5")

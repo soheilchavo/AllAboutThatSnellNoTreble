@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://n3u4ngkeipv4"]
+
+[ext_resource type="Texture2D" uid="uid://7ep6i32i28j6" path="res://sprites/Wall.png" id="1_1dahr"]
+[ext_resource type="Script" uid="uid://d3c7jcyneec1u" path="res://scripts/rotating_platform.gd" id="1_4xot0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4xot0"]
+size = Vector2(64, 23)
+
+[node name="RotatingPlatform" type="Node2D" groups=["object", "wall"]]
+script = ExtResource("1_4xot0")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["wall"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(0, 92)
+texture = ExtResource("1_1dahr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 94.5)
+shape = SubResource("RectangleShape2D_4xot0")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." groups=["wall"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(0, -101)
+texture = ExtResource("1_1dahr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(0, -98.5)
+shape = SubResource("RectangleShape2D_4xot0")

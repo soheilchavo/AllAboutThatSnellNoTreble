@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://ds5n3imwmtj36"]
+
+[ext_resource type="Texture2D" uid="uid://cqt8hspw4b2mm" path="res://sprites/Reflector.png" id="1_gybmo"]
+[ext_resource type="Script" uid="uid://npqmmiepi1ma" path="res://scripts/reflector.gd" id="1_h6liq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8w04w"]
+size = Vector2(35, 18.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_801nt"]
+size = Vector2(59, 59)
+
+[node name="Reflector" type="Area2D"]
+script = ExtResource("1_h6liq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_gybmo")
+
+[node name="PositiveFlip" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PositiveFlip"]
+position = Vector2(6, 18)
+shape = SubResource("RectangleShape2D_8w04w")
+
+[node name="NegativeFlip" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NegativeFlip"]
+position = Vector2(-18, -3.5)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_8w04w")
+
+[node name="MouseArea" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -1.5)
+shape = SubResource("RectangleShape2D_801nt")

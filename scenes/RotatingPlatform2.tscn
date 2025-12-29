@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://jhemnpd2mqdf"]
+
+[ext_resource type="Script" uid="uid://d3c7jcyneec1u" path="res://scripts/rotating_platform.gd" id="1_2sjdp"]
+[ext_resource type="Texture2D" uid="uid://7ep6i32i28j6" path="res://sprites/Wall.png" id="2_xlwft"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4xot0"]
+size = Vector2(64, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2sjdp"]
+size = Vector2(64, 23)
+
+[node name="RotatingPlatform" type="Node2D" groups=["object", "wall"]]
+script = ExtResource("1_2sjdp")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["wall"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(0, 92)
+texture = ExtResource("2_xlwft")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 94.5)
+shape = SubResource("RectangleShape2D_4xot0")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." groups=["wall"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(0, -101)
+texture = ExtResource("2_xlwft")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(0, -98.5)
+shape = SubResource("RectangleShape2D_4xot0")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." groups=["wall"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3"]
+position = Vector2(-105, 0)
+rotation = 1.5707964
+texture = ExtResource("2_xlwft")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(-105, 2.5)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_2sjdp")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." groups=["wall"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D4"]
+position = Vector2(104, 0)
+rotation = 1.5707964
+texture = ExtResource("2_xlwft")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(104, 2.5)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_2sjdp")
