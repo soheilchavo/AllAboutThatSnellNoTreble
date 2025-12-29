@@ -1,6 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://c1qj1aibsyb0j"]
+[gd_scene load_steps=18 format=3 uid="uid://c1qj1aibsyb0j"]
 
 [ext_resource type="Texture2D" uid="uid://3efhem05d81h" path="res://sprites/Background.png" id="1_15dr6"]
+[ext_resource type="PackedScene" uid="uid://cws2rop55m7jy" path="res://camera_obj.tscn" id="1_by1fu"]
 [ext_resource type="Texture2D" uid="uid://7ep6i32i28j6" path="res://sprites/Wall.png" id="2_dvuif"]
 [ext_resource type="PackedScene" uid="uid://cl2jadwc7hird" path="res://scenes/Source.tscn" id="3_7ph8i"]
 [ext_resource type="PackedScene" uid="uid://u0ihkwmrusrc" path="res://scenes/Reciever.tscn" id="4_by1fu"]
@@ -27,10 +28,7 @@ size = Vector2(266, 20)
 
 [node name="BaseScene" type="Node2D"]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(137.26, 0)
-zoom = Vector2(0.77, 0.77)
-limit_enabled = false
+[node name="Camera2D" parent="." instance=ExtResource("1_by1fu")]
 
 [node name="Backgrounds" type="Node2D" parent="."]
 

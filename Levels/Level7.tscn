@@ -1,5 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://0akihebpwd5p"]
 
+[ext_resource type="PackedScene" uid="uid://cws2rop55m7jy" path="res://camera_obj.tscn" id="1_4b247"]
 [ext_resource type="Texture2D" uid="uid://3efhem05d81h" path="res://sprites/Background.png" id="1_sdhjx"]
 [ext_resource type="Texture2D" uid="uid://7ep6i32i28j6" path="res://sprites/Wall.png" id="2_i4375"]
 [ext_resource type="PackedScene" uid="uid://cl2jadwc7hird" path="res://scenes/Source.tscn" id="3_4b247"]
@@ -15,26 +16,20 @@
 size = Vector2(680, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i4375"]
-size = Vector2(415, 20)
+size = Vector2(526, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4b247"]
-size = Vector2(383, 20)
+size = Vector2(302, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o4d3g"]
 size = Vector2(579.5, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_isovy"]
-size = Vector2(191.75, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g3tdx"]
-size = Vector2(125.875, 20)
+size = Vector2(247.75, 20)
 
 [node name="BaseScene" type="Node2D"]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(137.26, 0)
-zoom = Vector2(0.77, 0.77)
-limit_enabled = false
+[node name="Camera2D" parent="." instance=ExtResource("1_4b247")]
 
 [node name="Backgrounds" type="Node2D" parent="."]
 
@@ -636,22 +631,22 @@ texture = ExtResource("2_i4375")
 flip_h = true
 flip_v = true
 
-[node name="Wall44" type="Sprite2D" parent="Walls"]
-position = Vector2(-157, -307)
-rotation = 1.5707964
-texture = ExtResource("2_i4375")
-flip_h = true
-flip_v = true
-
-[node name="Wall45" type="Sprite2D" parent="Walls"]
-position = Vector2(-157, -243)
-rotation = 1.5707964
-texture = ExtResource("2_i4375")
-flip_h = true
-flip_v = true
-
 [node name="Wall47" type="Sprite2D" parent="Walls"]
 position = Vector2(-157, -63)
+rotation = 1.5707964
+texture = ExtResource("2_i4375")
+flip_h = true
+flip_v = true
+
+[node name="Wall58" type="Sprite2D" parent="Walls"]
+position = Vector2(-157, -125)
+rotation = 1.5707964
+texture = ExtResource("2_i4375")
+flip_h = true
+flip_v = true
+
+[node name="Wall59" type="Sprite2D" parent="Walls"]
+position = Vector2(-157, -174)
 rotation = 1.5707964
 texture = ExtResource("2_i4375")
 flip_h = true
@@ -727,15 +722,8 @@ texture = ExtResource("2_i4375")
 flip_h = true
 flip_v = true
 
-[node name="Wall59" type="Sprite2D" parent="Walls"]
-position = Vector2(11, -51)
-rotation = 1.5707964
-texture = ExtResource("2_i4375")
-flip_h = true
-flip_v = true
-
 [node name="Wall60" type="Sprite2D" parent="Walls"]
-position = Vector2(11, 13)
+position = Vector2(11, -121)
 rotation = 1.5707964
 texture = ExtResource("2_i4375")
 flip_h = true
@@ -743,6 +731,13 @@ flip_v = true
 
 [node name="Wall61" type="Sprite2D" parent="Walls"]
 position = Vector2(11, 77)
+rotation = 1.5707964
+texture = ExtResource("2_i4375")
+flip_h = true
+flip_v = true
+
+[node name="Wall75" type="Sprite2D" parent="Walls"]
+position = Vector2(11, 31)
 rotation = 1.5707964
 texture = ExtResource("2_i4375")
 flip_h = true
@@ -963,12 +958,12 @@ rotation = 1.5707964
 shape = SubResource("RectangleShape2D_2puwf")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Walls/Wallbody2"]
-position = Vector2(-154, 112.5)
+position = Vector2(-154, 57)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_i4375")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Walls/Wallbody2"]
-position = Vector2(12.999998, 109.5)
+position = Vector2(12.999996, 150)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_4b247")
 
@@ -978,14 +973,9 @@ rotation = 1.5707964
 shape = SubResource("RectangleShape2D_o4d3g")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Walls/Wallbody2"]
-position = Vector2(13.000009, -241.875)
+position = Vector2(13.000008, -213.875)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_isovy")
-
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="Walls/Wallbody2"]
-position = Vector2(-154, -273.9375)
-rotation = 1.5707964
-shape = SubResource("RectangleShape2D_g3tdx")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls/Wallbody2"]
 position = Vector2(340, 0)

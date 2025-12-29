@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cws2rop55m7jy"]
+
+[node name="Camera2D" type="Camera2D"]
+offset = Vector2(137.26, 0)
+zoom = Vector2(1.8, 1.8)
+limit_enabled = false
