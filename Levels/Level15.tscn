@@ -802,11 +802,13 @@ text = "Click and drag with mouse to move resources
 
 Press R to rotate a resource while dragging it"
 
-[node name="PortalA" parent="Resources" instance=ExtResource("5_orqvs")]
+[node name="PortalA" parent="Resources" node_paths=PackedStringArray("sister_portal") instance=ExtResource("5_orqvs")]
 position = Vector2(406, -318)
+sister_portal = NodePath("../PortalA2")
 
-[node name="PortalA2" parent="Resources" instance=ExtResource("5_orqvs")]
+[node name="PortalA2" parent="Resources" node_paths=PackedStringArray("sister_portal") instance=ExtResource("5_orqvs")]
 position = Vector2(468, -318)
+sister_portal = NodePath("../PortalA")
 
 [node name="GameManager" type="Node2D" parent="."]
 script = ExtResource("10_jdj5m")
