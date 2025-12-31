@@ -7,6 +7,7 @@ func _on_input_event(_viewport, event, _shape_idx):
 		var resources = get_parent().find_child("Resources")
 		Global.saved_transforms = []
 		Global.saved_reflector_dir = []
+		Global.saved_portal_rot = []
 		for child in resources.get_children():
 			Global.saved_transforms.append({
 				"position": child.position,
@@ -14,4 +15,6 @@ func _on_input_event(_viewport, event, _shape_idx):
 			})
 			if child.is_in_group("super_reflector"):
 				Global.saved_reflector_dir.append(child.out_dir)
+			if child.is_in_group("portal"):
+				Global.saved_portal_rot.append(child.out_rot)
 		get_tree().reload_current_scene()

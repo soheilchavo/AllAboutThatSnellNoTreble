@@ -13,4 +13,5 @@ func _on_input_event(_viewport, event, _shape_idx):
 		for source in get_tree().get_nodes_in_group("source"):
 			source.launch()
 		for obj in get_tree().get_nodes_in_group("object"):
+			print(obj.name)
 			obj.activate()

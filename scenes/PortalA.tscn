@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://blx3v6j57cfjk"]
+
+[ext_resource type="Script" uid="uid://d26fbp77rbi4f" path="res://scripts/portal.gd" id="1_v7sne"]
+[ext_resource type="Texture2D" uid="uid://cw1m4htnfum50" path="res://sprites/APortal.png" id="2_v7sne"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u2mli"]
+size = Vector2(5, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pnekd"]
+size = Vector2(8.5, 54)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_801nt"]
+size = Vector2(59, 20.5)
+
+[node name="PortalA" type="Area2D" groups=["portal"]]
+script = ExtResource("1_v7sne")
+out_rot = 180
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_v7sne")
+
+[node name="Entrance" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Entrance"]
+position = Vector2(-4.7683716e-07, 7.5)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_u2mli")
+
+[node name="Blocker" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocker" groups=["wall"]]
+position = Vector2(-7.649493e-08, -0.25)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_pnekd")
+
+[node name="MouseArea" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 3.25)
+shape = SubResource("RectangleShape2D_801nt")
