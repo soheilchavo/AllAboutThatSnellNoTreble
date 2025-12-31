@@ -17,12 +17,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2puwf"]
 size = Vector2(680, 20)
 
-[node name="BaseScene" type="Node2D"]
+[node name="BaseScene2" type="Node2D"]
 
 [node name="Camera2D" parent="." instance=ExtResource("1_s2bhg")]
 
 [node name="Backgrounds" type="Node2D" parent="."]
-visible = false
 
 [node name="Background" type="Sprite2D" parent="Backgrounds"]
 position = Vector2(105, 78)
@@ -694,25 +693,97 @@ texture = ExtResource("3_hm6rh")
 flip_v = true
 
 [node name="Wall43" type="Sprite2D" parent="Walls"]
-position = Vector2(-87, -307)
-rotation = 1.5707964
-texture = ExtResource("3_hm6rh")
-flip_v = true
-
-[node name="Wall46" type="Sprite2D" parent="Walls"]
-position = Vector2(81, -307)
+position = Vector2(-99, -307)
 rotation = 1.5707964
 texture = ExtResource("3_hm6rh")
 flip_v = true
 
 [node name="Wall44" type="Sprite2D" parent="Walls"]
-position = Vector2(-87, -243)
+position = Vector2(-99, -243)
 rotation = 1.5707964
 texture = ExtResource("3_hm6rh")
 flip_v = true
 
 [node name="Wall45" type="Sprite2D" parent="Walls"]
-position = Vector2(81, -243)
+position = Vector2(-99, -179)
+rotation = 1.5707964
+texture = ExtResource("3_hm6rh")
+flip_v = true
+
+[node name="Wall46" type="Sprite2D" parent="Walls"]
+position = Vector2(-99, -115)
+rotation = 1.5707964
+texture = ExtResource("3_hm6rh")
+flip_v = true
+
+[node name="Wall47" type="Sprite2D" parent="Walls"]
+position = Vector2(-99, -51)
+rotation = 1.5707964
+texture = ExtResource("3_hm6rh")
+flip_v = true
+
+[node name="Wall48" type="Sprite2D" parent="Walls"]
+position = Vector2(-99, 13)
+rotation = 1.5707964
+texture = ExtResource("3_hm6rh")
+flip_v = true
+
+[node name="Wall49" type="Sprite2D" parent="Walls"]
+position = Vector2(-99, 77)
+rotation = 1.5707964
+texture = ExtResource("3_hm6rh")
+flip_v = true
+
+[node name="Wall50" type="Sprite2D" parent="Walls"]
+position = Vector2(-99, 141)
+rotation = 1.5707964
+texture = ExtResource("3_hm6rh")
+flip_v = true
+
+[node name="Wall51" type="Sprite2D" parent="Walls"]
+position = Vector2(93, -179)
+rotation = 1.5707964
+texture = ExtResource("3_hm6rh")
+flip_v = true
+
+[node name="Wall52" type="Sprite2D" parent="Walls"]
+position = Vector2(93, -115)
+rotation = 1.5707964
+texture = ExtResource("3_hm6rh")
+flip_v = true
+
+[node name="Wall53" type="Sprite2D" parent="Walls"]
+position = Vector2(93, -51)
+rotation = 1.5707964
+texture = ExtResource("3_hm6rh")
+flip_v = true
+
+[node name="Wall54" type="Sprite2D" parent="Walls"]
+position = Vector2(93, 13)
+rotation = 1.5707964
+texture = ExtResource("3_hm6rh")
+flip_v = true
+
+[node name="Wall55" type="Sprite2D" parent="Walls"]
+position = Vector2(93, 77)
+rotation = 1.5707964
+texture = ExtResource("3_hm6rh")
+flip_v = true
+
+[node name="Wall56" type="Sprite2D" parent="Walls"]
+position = Vector2(93, 141)
+rotation = 1.5707964
+texture = ExtResource("3_hm6rh")
+flip_v = true
+
+[node name="Wall57" type="Sprite2D" parent="Walls"]
+position = Vector2(93, 205)
+rotation = 1.5707964
+texture = ExtResource("3_hm6rh")
+flip_v = true
+
+[node name="Wall58" type="Sprite2D" parent="Walls"]
+position = Vector2(93, 269)
 rotation = 1.5707964
 texture = ExtResource("3_hm6rh")
 flip_v = true
@@ -758,47 +829,118 @@ position = Vector2(0, -349)
 shape = SubResource("RectangleShape2D_2puwf")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls/Wallbody2"]
-position = Vector2(-322, 2)
+position = Vector2(-322, -16)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_2puwf")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls/Wallbody2"]
-position = Vector2(340, 0)
+position = Vector2(340, -15)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_2puwf")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Walls/Wallbody2"]
-position = Vector2(-84, -305)
+position = Vector2(-96, -305)
 rotation = 1.5707964
 scale = Vector2(0.1, 1)
 shape = SubResource("RectangleShape2D_2puwf")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Walls/Wallbody2"]
-position = Vector2(-84, -245)
+position = Vector2(-96, -245)
 rotation = 1.5707964
 scale = Vector2(0.1, 1)
 shape = SubResource("RectangleShape2D_2puwf")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Walls/Wallbody2"]
-position = Vector2(84, -305)
+position = Vector2(-96, -181)
 rotation = 1.5707964
 scale = Vector2(0.1, 1)
 shape = SubResource("RectangleShape2D_2puwf")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Walls/Wallbody2"]
-position = Vector2(84, -245)
+position = Vector2(-96, -117)
+rotation = 1.5707964
+scale = Vector2(0.1, 1)
+shape = SubResource("RectangleShape2D_2puwf")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Walls/Wallbody2"]
+position = Vector2(-96, -53)
+rotation = 1.5707964
+scale = Vector2(0.1, 1)
+shape = SubResource("RectangleShape2D_2puwf")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Walls/Wallbody2"]
+position = Vector2(-96, 11)
+rotation = 1.5707964
+scale = Vector2(0.1, 1)
+shape = SubResource("RectangleShape2D_2puwf")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Walls/Wallbody2"]
+position = Vector2(-96, 75)
+rotation = 1.5707964
+scale = Vector2(0.1, 1)
+shape = SubResource("RectangleShape2D_2puwf")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Walls/Wallbody2"]
+position = Vector2(-96, 139)
+rotation = 1.5707964
+scale = Vector2(0.1, 1)
+shape = SubResource("RectangleShape2D_2puwf")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Walls/Wallbody2"]
+position = Vector2(96, -177)
+rotation = 1.5707964
+scale = Vector2(0.1, 1)
+shape = SubResource("RectangleShape2D_2puwf")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Walls/Wallbody2"]
+position = Vector2(96, -117)
+rotation = 1.5707964
+scale = Vector2(0.1, 1)
+shape = SubResource("RectangleShape2D_2puwf")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Walls/Wallbody2"]
+position = Vector2(96, -53)
+rotation = 1.5707964
+scale = Vector2(0.1, 1)
+shape = SubResource("RectangleShape2D_2puwf")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Walls/Wallbody2"]
+position = Vector2(96, 11)
+rotation = 1.5707964
+scale = Vector2(0.1, 1)
+shape = SubResource("RectangleShape2D_2puwf")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Walls/Wallbody2"]
+position = Vector2(96, 75)
+rotation = 1.5707964
+scale = Vector2(0.1, 1)
+shape = SubResource("RectangleShape2D_2puwf")
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="Walls/Wallbody2"]
+position = Vector2(96, 139)
+rotation = 1.5707964
+scale = Vector2(0.1, 1)
+shape = SubResource("RectangleShape2D_2puwf")
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="Walls/Wallbody2"]
+position = Vector2(96, 203)
+rotation = 1.5707964
+scale = Vector2(0.1, 1)
+shape = SubResource("RectangleShape2D_2puwf")
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="Walls/Wallbody2"]
+position = Vector2(96, 267)
 rotation = 1.5707964
 scale = Vector2(0.1, 1)
 shape = SubResource("RectangleShape2D_2puwf")
 
 [node name="Source2" parent="." instance=ExtResource("4_vmia5")]
-position = Vector2(-278, -297)
-rotation = 1.5707964
-direction = Vector2(1, 0)
+position = Vector2(-251, -306)
+rotation = 3.1415927
+direction = Vector2(0, 1)
 
 [node name="Reciever" parent="." instance=ExtResource("5_c48h2")]
-position = Vector2(267, -305)
-rotation = 3.1415927
+position = Vector2(269, 271)
 
 [node name="PlayButton" parent="." instance=ExtResource("6_ill0u")]
 position = Vector2(-302, -405)
@@ -814,6 +956,7 @@ offset_top = -361.0
 offset_right = 497.0
 offset_bottom = -336.0
 text = "Resources"
+metadata/_edit_use_anchors_ = true
 
 [node name="Text2" type="RichTextLabel" parent="Resources"]
 offset_left = -325.0
@@ -823,6 +966,7 @@ offset_bottom = 494.0
 text = "Click and drag with mouse to move resources
 
 Press R to rotate a resource while dragging it"
+metadata/_edit_use_anchors_ = true
 
 [node name="Capacitor" parent="Resources" instance=ExtResource("8_vmia5")]
 position = Vector2(407, -304)
@@ -868,12 +1012,24 @@ text = "Level 13
 "
 
 [node name="GlidingPlatform" parent="." instance=ExtResource("14_ill0u")]
-position = Vector2(-227, -89)
-rotation = -0.7853982
+position = Vector2(-279, -160)
+AMPLITUDE = 4.8
 
 [node name="GlidingPlatform2" parent="." instance=ExtResource("14_ill0u")]
-position = Vector2(3, -35)
+position = Vector2(-279, -80)
+SPEED = 0.55
+AMPLITUDE = 2.64
 
 [node name="GlidingPlatform3" parent="." instance=ExtResource("14_ill0u")]
-position = Vector2(204, -101)
-rotation = 0.7853982
+position = Vector2(-279, 0)
+SPEED = 2.084
+AMPLITUDE = 10.0
+
+[node name="GlidingPlatform4" parent="." instance=ExtResource("14_ill0u")]
+position = Vector2(-279, 80)
+SPEED = 0.55
+AMPLITUDE = 2.64
+
+[node name="GlidingPlatform5" parent="." instance=ExtResource("14_ill0u")]
+position = Vector2(-279, 160)
+AMPLITUDE = 4.8
