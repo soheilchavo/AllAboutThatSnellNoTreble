@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c2g5aw3y6y43k"]
+[gd_scene load_steps=18 format=3 uid="uid://c2g5aw3y6y43k"]
 
 [ext_resource type="PackedScene" uid="uid://cws2rop55m7jy" path="res://camera_obj.tscn" id="1_gkcge"]
 [ext_resource type="Texture2D" uid="uid://3efhem05d81h" path="res://sprites/Background.png" id="2_kj3vf"]
@@ -7,7 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://u0ihkwmrusrc" path="res://scenes/Reciever.tscn" id="6_abllm"]
 [ext_resource type="PackedScene" uid="uid://dvgoxc6ndoe8f" path="res://scenes/PlayButton.tscn" id="7_dtalk"]
 [ext_resource type="PackedScene" uid="uid://djfgdbscfpnh" path="res://scenes/RetryButton.tscn" id="8_6puyu"]
-[ext_resource type="PackedScene" path="res://scenes/PortalM.tscn" id="9_jqv0s"]
+[ext_resource type="PackedScene" uid="uid://2y5ys2i11pen" path="res://scenes/PortalM.tscn" id="9_jqv0s"]
+[ext_resource type="PackedScene" uid="uid://jhemnpd2mqdf" path="res://scenes/RotatingPlatform2.tscn" id="10_4xjce"]
 [ext_resource type="PackedScene" uid="uid://dy0aeftm0y5ag" path="res://scenes/SuperReflector.tscn" id="10_l2v52"]
 [ext_resource type="Script" uid="uid://hf74oircm13n" path="res://scripts/game_manager.gd" id="11_78g6e"]
 [ext_resource type="PackedScene" uid="uid://m8n1vflytfpr" path="res://scenes/NextLevelButton.tscn" id="12_8if7j"]
@@ -24,7 +25,6 @@ size = Vector2(680, 20)
 [node name="Camera2D" parent="." instance=ExtResource("1_gkcge")]
 
 [node name="Backgrounds" type="Node2D" parent="."]
-visible = false
 
 [node name="Background" type="Sprite2D" parent="Backgrounds"]
 position = Vector2(105, 78)
@@ -846,10 +846,11 @@ position = Vector2(479, -309)
 sister_portal = NodePath("../PortalM")
 
 [node name="SuperReflector" parent="Resources" instance=ExtResource("10_l2v52")]
-position = Vector2(-119, 229)
+position = Vector2(404, -227)
 
-[node name="SuperReflector2" parent="Resources" instance=ExtResource("10_l2v52")]
-position = Vector2(482, -227)
+[node name="RotatingPlatform" parent="Resources" instance=ExtResource("10_4xjce")]
+position = Vector2(-85, -321)
+SPEED = 100.0
 
 [node name="GameManager" type="Node2D" parent="."]
 script = ExtResource("11_78g6e")
@@ -881,6 +882,30 @@ position = Vector2(202, 270)
 rotation = -1.5707964
 AMPLITUDE = 4.8
 
+[node name="GlidingPlatform8" parent="." instance=ExtResource("13_kj3vf")]
+position = Vector2(-46, 270)
+rotation = -1.5707964
+SPEED = 1.5
+AMPLITUDE = 1.8
+
+[node name="GlidingPlatform9" parent="." instance=ExtResource("13_kj3vf")]
+position = Vector2(18, 136)
+rotation = 1.5707964
+SPEED = 1.5
+AMPLITUDE = 1.8
+
+[node name="GlidingPlatform10" parent="." instance=ExtResource("13_kj3vf")]
+position = Vector2(84, 270)
+rotation = -1.5707964
+SPEED = 1.5
+AMPLITUDE = 1.8
+
+[node name="GlidingPlatform11" parent="." instance=ExtResource("13_kj3vf")]
+position = Vector2(148, 136)
+rotation = 1.5707964
+SPEED = 1.5
+AMPLITUDE = 1.8
+
 [node name="GlidingPlatform2" parent="." instance=ExtResource("13_kj3vf")]
 position = Vector2(226, 270)
 rotation = -1.5707964
@@ -890,6 +915,25 @@ AMPLITUDE = 4.8
 position = Vector2(297, -138)
 SPEED = 0.0
 AMPLITUDE = 4.8
+
+[node name="GlidingPlatform12" parent="." instance=ExtResource("13_kj3vf")]
+position = Vector2(-216, -306)
+rotation = 1.5707964
+AMPLITUDE = 2.4
+
+[node name="GlidingPlatform5" parent="." instance=ExtResource("13_kj3vf")]
+position = Vector2(-279, -138)
+AMPLITUDE = 4.8
+
+[node name="GlidingPlatform6" parent="." instance=ExtResource("13_kj3vf")]
+position = Vector2(-279, 72)
+SPEED = 4.0
+AMPLITUDE = 19.2
+
+[node name="GlidingPlatform7" parent="." instance=ExtResource("13_kj3vf")]
+position = Vector2(-279, 184)
+SPEED = 2.0
+AMPLITUDE = 9.6
 
 [node name="GlidingPlatform4" parent="." instance=ExtResource("13_kj3vf")]
 position = Vector2(-297, -51.999992)
@@ -903,5 +947,10 @@ position = Vector2(405, -70)
 [node name="Reflector" parent="." instance=ExtResource("15_hdam6")]
 position = Vector2(405, 14)
 
-[node name="Reflector2" parent="." instance=ExtResource("15_hdam6")]
-position = Vector2(477, 14)
+[node name="RotatingPlatform" parent="." instance=ExtResource("10_4xjce")]
+position = Vector2(57, -60)
+SPEED = -80.0
+
+[node name="RotatingPlatform2" parent="." instance=ExtResource("10_4xjce")]
+position = Vector2(207, -257)
+SPEED = 120.0
