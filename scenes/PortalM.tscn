@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cno6gi6oqflxa"]
+[gd_scene load_steps=6 format=3 uid="uid://2y5ys2i11pen"]
 
 [ext_resource type="Script" uid="uid://7g7ex2dfvf4m" path="res://scripts/portal_m.gd" id="1_nonkh"]
 [ext_resource type="Texture2D" uid="uid://d1xk4q372y6oc" path="res://sprites/MPortal.png" id="2_nonkh"]

@@ -19,7 +19,7 @@ func _on_input_event(_viewport, event, _shape_idx):
 func _process(_delta):
 	if dragging:
 		global_position = get_global_mouse_position()
-		if Input.is_action_just_pressed("Rotate"):
+		if Input.is_action_just_pressed("Rotate"):			
 			rotation += deg_to_rad(90)
 			out_rot += deg_to_rad(90)
 
@@ -30,14 +30,29 @@ func teleport(body):
 			var laser_direction = Vector2.from_angle(body.rotation).normalized()
 			var new_dir = Vector2(laser_direction.y, laser_direction.x)
 			
+				
+			
+			
 			#Laser is 0 90 180 or 270
-			if abs(new_dir.y - new_dir.x) == 1:
-				var rotated_dir = new_dir.rotated(deg_to_rad(-90))
-				body.set_meta("Direction", -rotated_dir)
+			if abs(int(new_dir.y) - int(new_dir.x)) == 1:				
+				if int(out_rot) % 180 == 0:
+					if abs(new_dir.y) == 1:					
+						var rotated_dir = new_dir.rotated(deg_to_rad(90))
+						body.set_meta("Direction", -rotated_dir)
+					else:						
+						var rotated_dir = new_dir.rotated(deg_to_rad(90))
+						body.set_meta("Direction", -rotated_dir)
+				else:
+					if abs(new_dir.y) == 1:						
+						var rotated_dir = new_dir.rotated(deg_to_rad(-90))
+						body.set_meta("Direction", -rotated_dir)
+					else:						
+						var rotated_dir = new_dir.rotated(deg_to_rad(-90))
+						body.set_meta("Direction", -rotated_dir)
+				
 				body.position = position
 			else:
 				new_dir = new_dir.rotated(sister_portal.out_rot)
-				print(new_dir, laser_direction)
 				body.set_meta("Direction", new_dir)
 				body.position = sister_portal.position + new_dir * offset_distance
 				
