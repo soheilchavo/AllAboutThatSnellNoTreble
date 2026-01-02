@@ -21,7 +21,7 @@ func _process(_delta):
 		global_position = get_global_mouse_position()
 		if Input.is_action_just_pressed("Rotate"):			
 			rotation += deg_to_rad(90)
-			out_rot += deg_to_rad(90)
+			out_rot = fmod(out_rot + PI/2, 2*PI)
 
 func teleport(body):
 	if not busy:
@@ -33,14 +33,13 @@ func teleport(body):
 			print(out_rot == PI, new_dir == Vector2(1, -0))
 			#Laser is 0 90 180 or 270
 			if abs(int(new_dir.y) - int(new_dir.x)) == 1:
-				if new_dir.is_equal_approx(Vector2(0, 1)) and out_rot % PI/2 == 0:
+				if new_dir.is_equal_approx(Vector2(0, 1)) and out_rot == PI/2:
 					body.set_meta("Direction", new_dir.rotated(-PI/2))
-				elif new_dir.is_equal_approx(Vector2(-1, 0)) and out_rot % PI == 0:
+				elif new_dir.is_equal_approx(Vector2(-1, 0)) and out_rot == 0:
 					body.set_meta("Direction", new_dir.rotated(-PI/2))
-				elif new_dir.is_equal_approx(Vector2(0, -1)) and out_rot % 3*PI/2 == 0:
+				elif new_dir.is_equal_approx(Vector2(0, -1)) and out_rot == 3*PI/2:
 					body.set_meta("Direction", new_dir.rotated(-PI/2))
-				elif new_dir.is_equal_approx(Vector2(1, 0)) and out_rot % PI == 0:
-					print("HELLO")
+				elif new_dir.is_equal_approx(Vector2(1, 0)) and out_rot == PI:
 					body.set_meta("Direction", new_dir.rotated(-PI/2))
 				else:
 					body.set_meta("Direction", new_dir.rotated(PI/2))
