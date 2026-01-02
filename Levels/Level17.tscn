@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dy0aeftm0y5ag" path="res://scenes/SuperReflector.tscn" id="10_l2v52"]
 [ext_resource type="Script" uid="uid://hf74oircm13n" path="res://scripts/game_manager.gd" id="11_78g6e"]
 [ext_resource type="PackedScene" uid="uid://m8n1vflytfpr" path="res://scenes/NextLevelButton.tscn" id="12_8if7j"]
-[ext_resource type="PackedScene" path="res://scenes/PortalA.tscn" id="12_gkcge"]
+[ext_resource type="PackedScene" uid="uid://blx3v6j57cfjk" path="res://scenes/PortalA.tscn" id="12_gkcge"]
 [ext_resource type="PackedScene" uid="uid://dkqka1hx8of0f" path="res://scenes/GlidingPlatform.tscn" id="13_kj3vf"]
 [ext_resource type="PackedScene" uid="uid://chatxggrkoh6i" path="res://scenes/Capacitor.tscn" id="14_satj5"]
 [ext_resource type="PackedScene" uid="uid://ds5n3imwmtj36" path="res://scenes/Reflector.tscn" id="15_hdam6"]
@@ -821,6 +821,20 @@ position = Vector2(-222, -406)
 
 [node name="Resources" type="Node2D" parent="."]
 
+[node name="PortalA" parent="Resources" node_paths=PackedStringArray("sister_portal") instance=ExtResource("12_gkcge")]
+position = Vector2(402, -142)
+sister_portal = NodePath("../PortalA2")
+
+[node name="PortalA2" parent="Resources" node_paths=PackedStringArray("sister_portal") instance=ExtResource("12_gkcge")]
+position = Vector2(482, -146)
+sister_portal = NodePath("../PortalA")
+
+[node name="Capacitor" parent="Resources" instance=ExtResource("14_satj5")]
+position = Vector2(405, -70)
+
+[node name="Reflector" parent="Resources" instance=ExtResource("15_hdam6")]
+position = Vector2(405, 14)
+
 [node name="Text" type="RichTextLabel" parent="Resources"]
 offset_left = 376.0
 offset_top = -361.0
@@ -868,14 +882,6 @@ offset_bottom = -470.0
 text = "Level 17
 
 "
-
-[node name="PortalA" parent="." node_paths=PackedStringArray("sister_portal") instance=ExtResource("12_gkcge")]
-position = Vector2(402, -142)
-sister_portal = NodePath("../PortalA2")
-
-[node name="PortalA2" parent="." node_paths=PackedStringArray("sister_portal") instance=ExtResource("12_gkcge")]
-position = Vector2(482, -146)
-sister_portal = NodePath("../PortalA")
 
 [node name="GlidingPlatform" parent="." instance=ExtResource("13_kj3vf")]
 position = Vector2(202, 270)
@@ -940,12 +946,6 @@ position = Vector2(-297, -51.999992)
 rotation = 0.7853982
 SPEED = 2.0
 AMPLITUDE = 2.8
-
-[node name="Capacitor" parent="." instance=ExtResource("14_satj5")]
-position = Vector2(405, -70)
-
-[node name="Reflector" parent="." instance=ExtResource("15_hdam6")]
-position = Vector2(405, 14)
 
 [node name="RotatingPlatform" parent="." instance=ExtResource("10_4xjce")]
 position = Vector2(57, -60)
