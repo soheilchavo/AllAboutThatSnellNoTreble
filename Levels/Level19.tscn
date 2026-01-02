@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c8sosfmegq848"]
+[gd_scene load_steps=15 format=3 uid="uid://c8sosfmegq848"]
 
 [ext_resource type="PackedScene" uid="uid://cws2rop55m7jy" path="res://camera_obj.tscn" id="1_t2mlr"]
 [ext_resource type="Texture2D" uid="uid://3efhem05d81h" path="res://sprites/Background.png" id="2_oy4i6"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://hf74oircm13n" path="res://scripts/game_manager.gd" id="11_01fwj"]
 [ext_resource type="PackedScene" uid="uid://m8n1vflytfpr" path="res://scenes/NextLevelButton.tscn" id="12_an3vy"]
 [ext_resource type="PackedScene" uid="uid://chatxggrkoh6i" path="res://scenes/Capacitor.tscn" id="12_t2mlr"]
+[ext_resource type="PackedScene" uid="uid://n3u4ngkeipv4" path="res://scenes/RotatingPlatform.tscn" id="13_oy4i6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2puwf"]
 size = Vector2(680, 20)
@@ -808,6 +809,9 @@ position = Vector2(-222, -406)
 [node name="Capacitor" parent="Resources" instance=ExtResource("12_t2mlr")]
 position = Vector2(537, -303)
 
+[node name="Capacitor2" parent="Resources" instance=ExtResource("12_t2mlr")]
+position = Vector2(612, -303)
+
 [node name="Text" type="RichTextLabel" parent="Resources"]
 offset_left = 376.0
 offset_top = -361.0
@@ -854,3 +858,8 @@ offset_top = -497.0
 offset_right = 363.0
 offset_bottom = -366.0
 text = "'m' portals act as filters, straight lasers will be reflected while diagonal lasers will go through the portal."
+
+[node name="RotatingPlatform" parent="." instance=ExtResource("13_oy4i6")]
+position = Vector2(83.99999, -149)
+rotation = 5.113754
+SPEED = 78.0
