@@ -36,17 +36,21 @@ func teleport(body):
 			#Laser is 0 90 180 or 270
 			if abs(int(new_dir.y) - int(new_dir.x)) == 1:				
 				if int(out_rot) % 180 == 0:
-					if abs(new_dir.y) == 1:					
+					if abs(new_dir.y) == 1:
+						print("Check 1")
 						var rotated_dir = new_dir.rotated(deg_to_rad(90))
 						body.set_meta("Direction", -rotated_dir)
-					else:						
+					else:
+						print("Check 2")
 						var rotated_dir = new_dir.rotated(deg_to_rad(90))
 						body.set_meta("Direction", -rotated_dir)
 				else:
-					if abs(new_dir.y) == 1:						
+					if abs(new_dir.y) == 1:
+						print("Check 3")
 						var rotated_dir = new_dir.rotated(deg_to_rad(-90))
 						body.set_meta("Direction", -rotated_dir)
-					else:						
+					else:
+						print("Check 4")
 						var rotated_dir = new_dir.rotated(deg_to_rad(-90))
 						body.set_meta("Direction", -rotated_dir)
 				
