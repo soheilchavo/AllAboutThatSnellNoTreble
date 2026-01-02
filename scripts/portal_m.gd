@@ -29,8 +29,6 @@ func teleport(body):
 			busy = true
 			var laser_direction = Vector2.from_angle(body.rotation).normalized()
 			var new_dir = Vector2(laser_direction.y, laser_direction.x)
-			print(new_dir, out_rot)
-			print(out_rot == PI, new_dir == Vector2(1, -0))
 			#Laser is 0 90 180 or 270
 			if abs(int(new_dir.y) - int(new_dir.x)) == 1:
 				if new_dir.is_equal_approx(Vector2(0, 1)) and out_rot == PI/2:
