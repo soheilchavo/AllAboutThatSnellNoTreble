@@ -802,6 +802,11 @@ position = Vector2(-279, 106)
 rotation = 1.5707964
 direction = Vector2(1, 0)
 
+[node name="Source3" parent="." instance=ExtResource("5_w15ah")]
+position = Vector2(136, 193)
+rotation = 4.712389
+direction = Vector2(-1, 0)
+
 [node name="Reciever" parent="." instance=ExtResource("6_mdql5")]
 position = Vector2(72, 271)
 
@@ -864,7 +869,7 @@ offset_left = -146.0
 offset_top = -433.0
 offset_right = 359.0
 offset_bottom = -363.0
-text = "you can move components after you press play"
+text = "you can move components after you press play (except for capacitors)"
 
 [node name="PortalMStationary" parent="." node_paths=PackedStringArray("sister_portal") instance=ExtResource("13_xclc1")]
 position = Vector2(133, -196)

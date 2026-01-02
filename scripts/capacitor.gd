@@ -15,7 +15,7 @@ func _on_input_event(viewport, event, shape_idx):
 		dragging = event.pressed
 
 func _process(delta):
-	if dragging:
+	if dragging and not busy:
 		global_position = get_global_mouse_position()
 
 func charge(body):
